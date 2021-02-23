@@ -4,18 +4,19 @@ import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table
+@Table(name = "users_table")
 public class User {
     @Id
+    @Column(name="id")
     private Long id;
 
-    @Column
+    @Column(name = "Name")
     private String name;
 
-    @Column
+    @Column(name = "Last Name")
     private String lastName;
 
-    @Column
+    @Column(name = "Age")
     private Byte age;
 
     public User() {
