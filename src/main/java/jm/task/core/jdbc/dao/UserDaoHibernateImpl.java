@@ -34,7 +34,7 @@ public class UserDaoHibernateImpl extends UserDaoJDBCImpl implements UserDao {
     public void dropUsersTable() {
             Session session = sessionFactory.openSession();
             Transaction transaction = session.beginTransaction();
-            session.createSQLQuery("drop table user_table")
+            session.createSQLQuery("DROP TABLE IF EXISTS user_table")
                 .executeUpdate();
             transaction.commit();
             session.close();
