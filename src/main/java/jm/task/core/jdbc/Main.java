@@ -21,8 +21,7 @@ public class Main {
         for (User u: us.getAllUsers()){
           System.out.println(u);
         }
-      us.cleanUsersTable();
-      us.dropUsersTable();
-
+        us.cleanUsersTable();
+        us.dropUsersTable();
       }
 }
